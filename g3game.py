@@ -320,13 +320,13 @@ def startGame():
 				# Check for arrow keys
 				if event.type == pygame.KEYDOWN:
 					if event.key == pygame.K_LEFT:
-						ufo.vx = -1
+						ufo.vx = -2
 					if event.key == pygame.K_RIGHT:
-						ufo.vx = 1
+						ufo.vx = 2
 					if event.key == pygame.K_DOWN:
-						ufo.vy = 1
+						ufo.vy = 2
 					if event.key == pygame.K_UP:
-						ufo.vy = -1
+						ufo.vy = -2
 				# If no key is pressed, UFO is stationary
 				else:
 					ufo.vx, ufo.vy = 0, 0
@@ -341,6 +341,9 @@ def startGame():
 		
 		# Update and redraw the screen
 		drawsc()
+		
+		# Delay 5ms
+		pygame.time.delay(5)
 
 if __name__ == '__main__':
 	'''
